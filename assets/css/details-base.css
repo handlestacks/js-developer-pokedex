@@ -9,7 +9,7 @@ body {
 
 .pokemon-selected-top {
     padding: 2rem 1rem 0;
-    border-radius:1rem 1rem 0 0;
+    border-radius:2rem 2rem 0 0;
 }
 
 .pokemon-controls {
@@ -17,6 +17,9 @@ body {
     justify-content: space-between;
     margin-bottom:1rem;
 }
+
+.pokemon-back,
+.pokemon-favorite {cursor:pointer;}
 
 .pokemon-info {
     display:flex;
@@ -69,7 +72,7 @@ body {
 .pokemon-bottom {
     height: 370px;
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 2rem;
     padding: 3rem 1rem 0;
     position: relative;
     top: -2.5rem;
