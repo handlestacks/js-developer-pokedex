@@ -18,8 +18,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
     <!-- Nosso CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/details-base.css">
+    <link rel="stylesheet" href="/assets/css/tabs.css">
+    <link rel="stylesheet" href="/assets/css/modal.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
 </head>
 
 <body>
@@ -37,10 +40,123 @@
         </div>
     </section>
 
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Abrir detalhes do pokemon</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            
+            <div class="pokemon-selected">
+                <div class="pokemon-selected-box">
+                    <div class="pokemon-selected-top grass">
+                        <div class="pokemon-controls">
+                            <div class="pokemon-back">
+                                <i class="fa-sharp fa-solid fa-arrow-left close" style="color: #ffffff;" title="Back"></i>
+                            </div>
+                            <div class="pokemon-favorite">
+                                <i class="fa-sharp fa-regular fa-heart" style="color: #ffffff;" class="Favorite it!"></i>
+                            </div>
+                        </div>
+        
+                        <div class="pokemon-info">
+                            <div class="pokemon-name-box">
+                                <span class="pokemon-name">Bulbasaur</span>
+                                <ol class="pokemon-types">
+                                    <li class="pokemon-type grass">Grass</li>
+                                    <li class="pokemon-type poison">Poison</li>
+                                </ol>
+                            </div>
+                            <div class="pokemon-number">
+                                #001
+                            </div>
+                        </div>
+        
+                        <div class="pokemon-image">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="bulbasaur">
+                        </div>
+                    </div>
+                    <div class="pokemon-bottom">
+                        
+                        <!-- Tab links -->
+                        <div class="tab">
+                            <button class="tablinks active" onclick="openCity(event, 'about')">About</button>
+                            <button class="tablinks" onclick="openCity(event, 'baseStats')">Base Stats</button>
+                            <button class="tablinks" onclick="openCity(event, 'evolution')">Evolution</button>
+                            <button class="tablinks" onclick="openCity(event, 'moves')">Moves</button>
+                        </div>
+                        
+                        <!-- Tab content -->
+                        <div id="about" class="tabcontent" style="display:block;">
+        
+                            <table border="0">
+                                <tr>
+                                    <th width="80">Species</th>
+                                    <td>Seed</td>
+                                </tr>
+                                <tr>
+                                    <th>Height</th>
+                                    <td>2'3,6* (0,70cm)</td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>15.2 lbs (6.9 kg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Abilities</th>
+                                    <td>Overgrow, Chlorophyl</td>
+                                </tr>
+                            </table>
+        
+                            <h2>Breeding</h2>
+        
+                            <table border="0">
+                                <tr>
+                                    <th width="80">Gender</th>
+                                    <td>87.5%   12.5%</td>
+                                </tr>
+                                <tr>
+                                    <th>Egg Groups</th>
+                                    <td>Monster</td>
+                                </tr>
+                                <tr>
+                                    <th>Egg Cycle</th>
+                                    <td>Grass</td>
+                                </tr>
+                            </table>
+        
+                        </div>
+                        
+                        <div id="baseStats" class="tabcontent">
+                            
+                        </div>
+                        
+                        <div id="evolution" class="tabcontent">
+                            
+                        </div>
+                        
+                        <div id="moves" class="tabcontent">
+                            
+                        </div>
+        
+                    </div>
+                </div>        
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/276f2e09a1.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script> 
+    <script src="./assets/js/tabs.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/modal.js"></script>   
+
 </body>
 
 </html>
